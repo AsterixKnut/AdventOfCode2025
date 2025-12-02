@@ -7,6 +7,7 @@
 #include <ios>
 #include <sstream>
 
+
 inline std::vector<std::string> readLines(const std::string& filepath) {
     std::vector<std::string> lines{};
     lines.reserve(1024);
