@@ -4,6 +4,7 @@
 
 namespace day01 { void solve(); }
 namespace day02 { void solve(); }
+namespace day03 { void solve(); }
 
 int main(int argc, char** argv) {
     if (argc < 2) {
@@ -17,7 +18,8 @@ int main(int argc, char** argv) {
     std::vector<std::function<void()>> solvers = {
         nullptr, // index 0 unsused
         day01::solve,
-        day02::solve
+        day02::solve,
+        day03::solve
     };
 
     // Warn if selected day is not implemented:
