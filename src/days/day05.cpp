@@ -105,6 +105,16 @@ void solve() {
     }
 
     std::cout << "Day05, part 1: " << numFreshIngredients << "\n";
+
+    // ============================= Part 2 ====================================
+
+    // We have already merged the ingredient list, so getting the number of fresh ingredient IDs is trivial:
+    unsigned long long numFreshIngedientIDs = 0;
+    for (Range range : ranges) {
+        numFreshIngedientIDs += range.end - range.start + 1;
+    }
+
+    std::cout << "Day05, part 2: " << numFreshIngedientIDs << "\n";
 }
 
 }
