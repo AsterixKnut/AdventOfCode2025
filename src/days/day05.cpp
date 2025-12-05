@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <chrono>
 
 #include "utils/input.hpp"
 
@@ -50,6 +51,8 @@ void solve() {
     }
 
     // ============================ PART 1 ======================================
+
+    auto start = std::chrono::high_resolution_clock::now();
 
     // Create merged ranges:
     std::vector<Range> ranges = {};
@@ -115,6 +118,11 @@ void solve() {
     }
 
     std::cout << "Day05, part 2: " << numFreshIngedientIDs << "\n";
+
+    auto end = std::chrono::high_resolution_clock::now();
+    auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+
+    std::cout << "Elapsed time (not including reading data from file): " << elapsed <<" µs\n";
 }
 
 }
