@@ -35,6 +35,8 @@ inline std::vector<std::string> splitString(const std::string& string, const cha
     std::stringstream ss(string);
 
     while (std::getline(ss, split, delim)) {
+        if (split.empty()) continue;
+        
         splits.push_back(split);
     }
 
