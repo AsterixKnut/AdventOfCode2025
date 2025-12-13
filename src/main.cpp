@@ -9,6 +9,7 @@ namespace day04 { void solve(); }
 namespace day05 { void solve(); }
 namespace day06 { void solve(); }
 namespace day07 { void solve(); }
+namespace day08 { void solve(); }
 
 int main(int argc, char** argv) {
     if (argc < 2) {
@@ -27,7 +28,8 @@ int main(int argc, char** argv) {
         day04::solve,
         day05::solve,
         day06::solve,
-        day07::solve
+        day07::solve,
+        day08::solve
     };
 
     // Warn if selected day is not implemented:
